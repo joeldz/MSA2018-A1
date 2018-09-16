@@ -4,7 +4,8 @@ import Title from "./components/Title";
 import Input from '@material-ui/core/Input';
 //import Button from '@material-ui/core/Button';
 import './App.css';
- 
+import { Grid, Paper } from '../node_modules/@material-ui/core';
+
 
 class App extends React.Component {
   state = {
@@ -41,20 +42,30 @@ class App extends React.Component {
   
   public render() {
     return (
-      <div>
-        <Title />
-        <form onSubmit={this.getPrice}>
-          <Input type="text" name="value" placeholder="Amount..." margin-left= "50px"/>
-          <Input type="text" name="symbol" placeholder="Symbol..." margin-left= "50px"/>
-          <button >Get Price</button>
-        </form>
-        <Price 
-          value={this.state.value}
-          usd={this.state.usd} 
-          nzd={this.state.nzd} 
-          error={this.state.error}
-        />
-      </div>
+      <Grid container>
+        <Grid item sm>
+          <Paper></Paper>
+        </Grid>
+        <Grid item sm>
+          <Paper style={{ padding:20, width:550 }} elevation={2}>
+            <Title />
+            <form onSubmit={this.getPrice}>
+              <Input type="text" name="value" placeholder="Amount..."/>
+              <Input type="text" name="symbol" placeholder="BTC, ETH, etc..."/>
+              <button >Get Price</button>
+            </form>
+            <Price 
+              value={this.state.value}
+              usd={this.state.usd} 
+              nzd={this.state.nzd} 
+              error={this.state.error}
+            />
+          </Paper>
+        </Grid>
+        <Grid item sm>
+          <Paper></Paper>
+        </Grid>
+      </Grid>
     );
   }
 }
