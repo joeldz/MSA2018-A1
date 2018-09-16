@@ -4,8 +4,8 @@ class Title extends React.Component {
     public render() {
         return(
             <div>
-                <h1>Crypto Price Checker</h1>
-                <p>Check the price of any cryptocurrency</p>
+                <h1>Crypto Price Converter</h1>
+                <p>Check the value of any cryptocurrency</p>
             </div>
         );
     }
