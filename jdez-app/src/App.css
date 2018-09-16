@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto+Slab:400,700');
+
+body {
+  font-family: "Open Sans", serif;
+}
+
+button {
+  border: 0;
+  padding: 8px 20px;
+  margin: 10px 10px;
+  border-radius: 2px;
+  font-weight: lighter;
+  letter-spacing: 1px;
+  font-size: 15px;
+  cursor: pointer;
+  background-color: #f1b151;
+  color: #fff;
+  font-weight: 100;
+}
+
+Input {
+  margin-right: 50px;
+}

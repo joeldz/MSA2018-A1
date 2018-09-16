@@ -1,14 +1,15 @@
 import * as React from "react";
+import { AppBar, Typography, Toolbar } from "@material-ui/core";
 
-class Title extends React.Component {
-    public render() {
-        return(
+const Title = () => (
+    <AppBar position="static" >
+        <Toolbar>
             <div>
-                <h1>Crypto Price Converter</h1>
-                <p>Check the value of any cryptocurrency</p>
+                <Typography variant="display2" gutterBottom>Crypto Price Converter</Typography>
+                <Typography variant="headline" gutterBottom>Check the value of any cryptocurrency</Typography>
             </div>
-        );
-    }
-};
+        </Toolbar>
+    </AppBar>
+);
 
 export default Title;
